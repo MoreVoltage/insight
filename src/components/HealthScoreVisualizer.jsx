@@ -103,28 +103,26 @@ const HealthScoreVisualizer = () => {
   };
 
   return (
-    <div className="w-full bg-white p-6 rounded-lg">
-      <h1 className="text-2xl font-bold text-center mb-8">Water Health Score System</h1>
-      
+    <div className="w-full bg-white p-6 rounded-lg shadow-lg">
       {/* Score Formula Visualization */}
       <div className="mb-12">
         <h2 className="text-xl font-semibold mb-4">How the Score is Calculated</h2>
-        <div className="flex items-center justify-center mb-6">
+        <div className="flex flex-wrap items-center justify-center mb-6 gap-4">
           <div className="bg-green-100 p-4 rounded-lg text-center">
             <p className="text-lg font-bold">Starting Score</p>
             <p className="text-3xl font-bold text-green-600">100</p>
           </div>
-          <div className="mx-4 text-3xl">−</div>
+          <div className="text-3xl">−</div>
           <div className="bg-red-100 p-4 rounded-lg text-center">
             <p className="text-lg font-bold">Total Deductions</p>
             <p className="text-3xl font-bold text-red-600">{exampleProduct.totalDeduction}</p>
           </div>
-          <div className="mx-4 text-3xl">=</div>
+          <div className="text-3xl">=</div>
           <div className="bg-blue-100 p-4 rounded-lg text-center">
             <p className="text-lg font-bold">Raw Score</p>
             <p className="text-3xl font-bold text-blue-600">{100 - exampleProduct.totalDeduction}</p>
           </div>
-          <div className="mx-4 text-3xl">→</div>
+          <div className="text-3xl">→</div>
           <div className="bg-purple-100 p-4 rounded-lg text-center">
             <p className="text-lg font-bold">Final Score</p>
             <p className="text-3xl font-bold text-purple-600">{exampleProduct.finalScore}</p>
